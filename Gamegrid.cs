@@ -11,7 +11,7 @@ namespace tic_tac_toe
         const int GRID_SIDE_LENGTH = 3;
         private static string[,] grid = new string[GRID_SIDE_LENGTH, GRID_SIDE_LENGTH]; // This grid will only ever contain one of the three : "", "x", "o". 
         private static string teamTurn = "x";
-        private static string breadAndbutter;
+
         // Set up empty grid
         public static void InitializeGrid()
         {
