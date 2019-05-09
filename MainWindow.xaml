@@ -17,5 +17,14 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
+        <Image Grid.Row="0" Grid.Column="0" Name="cell_0_0"></Image>
+        <Image Grid.Row="1" Grid.Column="0" Name="cell_1_0"></Image>
+        <Image Grid.Row="2" Grid.Column="0" Name="cell_2_0"></Image>
+        <Image Grid.Row="0" Grid.Column="1" Name="cell_0_1"></Image>
+        <Image Grid.Row="0" Grid.Column="2" Name="cell_0_2"></Image>
+        <Image Grid.Row="1" Grid.Column="1" Name="cell_1_1"></Image>
+        <Image Grid.Row="1" Grid.Column="2" Name="cell_1_2"></Image>
+        <Image Grid.Row="2" Grid.Column="1" Name="cell_2_1"></Image>
+        <Image Grid.Row="2" Grid.Column="2" Name="cell_2_2"></Image>
     </Grid>
 </Window>
