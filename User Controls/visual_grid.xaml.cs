@@ -131,7 +131,35 @@ namespace tic_tac_toe.User_Controls
             int x = Convert.ToInt32(s[1]);
             int y = Convert.ToInt32(s[2]);
 
-            DrawX(x, y);
+            Gamegrid.PlaceMarker(x, y, Gamegrid.WhoseTurn());
+            Gamegrid.ChangeTurn();
+
+            SynchornizeWithGameGrid();
+
+        }
+
+        private void SynchornizeWithGameGrid()
+        {
+            for( int i = 0; i < 3; i++)
+            {
+                for( int j = 0; j < 3; j++)
+                {
+                    string marker = Gamegrid.ValueAt(i, j);
+
+                    switch (marker)
+                    {
+                        case "x":
+                            DrawX(i, j);
+                            break;
+                        case "o":
+                            DrawO(i, j);
+                            break;
+                        default:
+                            DrawBlank(i, j);
+                            break;
+                    }                    
+                }
+            }
         }
     }
 }

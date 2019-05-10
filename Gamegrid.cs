@@ -83,7 +83,7 @@ namespace tic_tac_toe
             if (teamMarker == teamTurn)
             {
                 // If the x,y cell in the grid empty then place the marker on the grid 
-                if (grid[x, y] == "")
+                if (grid[x, y] == "" || grid[x,y] == null)
                 {
                     grid[x, y] = teamMarker;
                 }
@@ -153,7 +153,7 @@ namespace tic_tac_toe
         private static string SanitizeTeamMarker(string teamMarker)
         {
             // If team marker isn't an "X", "x", "o", "O" then "return ;"
-            if (teamMarker != "X" || teamMarker != "x" || teamMarker != "O" || teamMarker != "o")
+            if (teamMarker != "X" && teamMarker != "x" && teamMarker != "O" && teamMarker != "o")
             {
                 System.Windows.MessageBox.Show("Incorrect marker passed to PlaceMarker");
                 return "bad marker";

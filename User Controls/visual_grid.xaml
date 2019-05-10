@@ -17,6 +17,7 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
+            
             <Image Grid.Row="0" Grid.Column="0" Name="cell_0_0" Stretch="Fill" MouseLeftButtonDown="CellMouseLeftButtonDown"></Image>
             <Image Grid.Row="0" Grid.Column="1" Name="cell_0_1" Stretch="Fill" MouseLeftButtonDown="CellMouseLeftButtonDown"></Image>
             <Image Grid.Row="0" Grid.Column="2" Name="cell_0_2" Stretch="Fill" MouseLeftButtonDown="CellMouseLeftButtonDown"></Image>
@@ -35,7 +36,6 @@
             <Border BorderBrush="Black" BorderThickness="2" Grid.Row="1" Grid.Column="2"></Border>
             <Border BorderBrush="Black" BorderThickness="2" Grid.Row="2" Grid.Column="0"></Border>
             <Border BorderBrush="Black" BorderThickness="2" Grid.Row="2" Grid.Column="1"></Border>
-            <Border BorderBrush="Black" BorderThickness="2" Grid.Row="2" Grid.Column="2"></Border>
-
-        </Grid>
+        <Border BorderBrush="Black" BorderThickness="2" Grid.Row="2" Grid.Column="2"></Border>
+    </Grid>
 </UserControl>
