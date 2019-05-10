@@ -23,8 +23,6 @@ namespace tic_tac_toe
         public MainWindow()
         {
             InitializeComponent();
-
-            gameGrid.DrawX(0, 0);
         }
     }
 }

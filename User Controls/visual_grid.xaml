@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:tic_tac_toe.User_Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -17,14 +17,14 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Image Grid.Row="0" Grid.Column="0" Name="cell_0_0"></Image>
-        <Image Grid.Row="0" Grid.Column="1" Name="cell_0_1"></Image>
-        <Image Grid.Row="0" Grid.Column="2" Name="cell_0_2"></Image>
-        <Image Grid.Row="1" Grid.Column="0" Name="cell_1_0"></Image>
-        <Image Grid.Row="1" Grid.Column="1" Name="cell_1_1"></Image>
-        <Image Grid.Row="1" Grid.Column="2" Name="cell_1_2"></Image>
-        <Image Grid.Row="2" Grid.Column="0" Name="cell_2_0"></Image>
-        <Image Grid.Row="2" Grid.Column="1" Name="cell_2_1"></Image>
-        <Image Grid.Row="2" Grid.Column="2" Name="cell_2_2"></Image>
+        <Image Grid.Row="0" Grid.Column="0" Name="cell_0_0" Stretch="Fill" MouseLeftButtonDown="CellMouseLeftButtonDown"></Image>
+        <Image Grid.Row="0" Grid.Column="1" Name="cell_0_1" Stretch="Fill" MouseLeftButtonDown="CellMouseLeftButtonDown"></Image>
+        <Image Grid.Row="0" Grid.Column="2" Name="cell_0_2" Stretch="Fill" MouseLeftButtonDown="CellMouseLeftButtonDown"></Image>
+        <Image Grid.Row="1" Grid.Column="0" Name="cell_1_0" Stretch="Fill" MouseLeftButtonDown="CellMouseLeftButtonDown"></Image>
+        <Image Grid.Row="1" Grid.Column="1" Name="cell_1_1" Stretch="Fill" MouseLeftButtonDown="CellMouseLeftButtonDown"></Image>
+        <Image Grid.Row="1" Grid.Column="2" Name="cell_1_2" Stretch="Fill" MouseLeftButtonDown="CellMouseLeftButtonDown"></Image>
+        <Image Grid.Row="2" Grid.Column="0" Name="cell_2_0" Stretch="Fill" MouseLeftButtonDown="CellMouseLeftButtonDown"></Image>
+        <Image Grid.Row="2" Grid.Column="1" Name="cell_2_1" Stretch="Fill" MouseLeftButtonDown="CellMouseLeftButtonDown"></Image>
+        <Image Grid.Row="2" Grid.Column="2" Name="cell_2_2" Stretch="Fill" MouseLeftButtonDown="CellMouseLeftButtonDown"></Image>
     </Grid>
 </UserControl>

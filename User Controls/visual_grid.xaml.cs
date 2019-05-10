@@ -35,6 +35,13 @@ namespace tic_tac_toe.User_Controls
             imageCells[2, 1] = cell_2_1;
             imageCells[2, 2] = cell_2_2;
 
+            for( int i = 0; i < 3; i++)
+            {
+                for( int j = 0; j < 3; j++)
+                {
+                    DrawBlank(i, j);
+                }
+            }
         }
 
         public void DrawX(int i, int j)
@@ -113,6 +120,18 @@ namespace tic_tac_toe.User_Controls
             }
             img.Freeze();
             imageCells[i, j].Source = img;
+        }
+
+        private void CellMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Image i = sender as Image;
+
+            string [] s = i.Name.Split('_');
+
+            int x = Convert.ToInt32(s[1]);
+            int y = Convert.ToInt32(s[2]);
+
+            DrawX(x, y);
         }
     }
 }
