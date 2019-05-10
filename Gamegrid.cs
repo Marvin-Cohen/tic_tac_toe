@@ -86,6 +86,7 @@ namespace tic_tac_toe
                 if (grid[x, y] == "" || grid[x,y] == null)
                 {
                     grid[x, y] = teamMarker;
+                    ChangeTurn();
                 }
             }
             else

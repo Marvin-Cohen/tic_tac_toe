@@ -132,7 +132,6 @@ namespace tic_tac_toe.User_Controls
             int y = Convert.ToInt32(s[2]);
 
             Gamegrid.PlaceMarker(x, y, Gamegrid.WhoseTurn());
-            Gamegrid.ChangeTurn();
 
             SynchornizeWithGameGrid();
 
