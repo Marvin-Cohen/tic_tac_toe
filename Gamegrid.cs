@@ -12,7 +12,7 @@ namespace tic_tac_toe
         private static string[,] grid = new string[GRID_SIDE_LENGTH, GRID_SIDE_LENGTH]; // This grid will only ever contain one of the three : "", "x", "o". 
         private static string teamTurn = "x";
 
-        public static string ValueAt(int x,int y)
+        public static string ValueAt(int x, int y)
         {
             // If x and y are outside of the grid then "return ;"
             if (x >= GRID_SIDE_LENGTH || y >= GRID_SIDE_LENGTH || x < 0 || y < 0)
