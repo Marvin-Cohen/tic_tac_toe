@@ -11,6 +11,7 @@ namespace tic_tac_toe
         const int GRID_SIDE_LENGTH = 3;
         private static string[,] grid = new string[GRID_SIDE_LENGTH, GRID_SIDE_LENGTH]; // This grid will only ever contain one of the three : "", "x", "o". 
         private static string teamTurn = "x";
+        public static int numberOfTurns = 0;
 
         public static string ValueAt(int x, int y)
         {
@@ -31,6 +32,9 @@ namespace tic_tac_toe
         // Set up empty grid
         public static void InitializeGrid()
         {
+            teamTurn = "x";
+            numberOfTurns = 0;
+
             for (int i = 0; i < GRID_SIDE_LENGTH; i++)
             {
                 for (int j = 0; j < GRID_SIDE_LENGTH; j++)
@@ -42,6 +46,7 @@ namespace tic_tac_toe
 
         public static void ChangeTurn()
         {
+            numberOfTurns++;
             if (teamTurn == "x")
             {
                 teamTurn = "o";

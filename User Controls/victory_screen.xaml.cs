@@ -24,7 +24,7 @@ namespace tic_tac_toe.User_Controls
         {
             InitializeComponent();
 
-            // Value of winningTeam is expected to be "x", "o", or " ". " " indicates a draw.
+            // Value of winningTeam is expected to be "x" or "o". Otherwise, the game is a draw.
 
             if (winningTeam == "x" || winningTeam == "X")
             {
@@ -64,6 +64,7 @@ namespace tic_tac_toe.User_Controls
                 img.EndInit();
             }
             img.Freeze();
+            VictoryMessage.Source = img;
         }
 
         public void ShowWinTeamO()
@@ -89,6 +90,7 @@ namespace tic_tac_toe.User_Controls
                 img.EndInit();
             }
             img.Freeze();
+            VictoryMessage.Source = img;
         }
 
         public void ShowDraw()
@@ -114,6 +116,13 @@ namespace tic_tac_toe.User_Controls
                 img.EndInit();
             }
             img.Freeze();
+            VictoryMessage.Source = img;
+        }
+
+        private void VictoryMessage_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            visual_grid vg = new visual_grid();
+            this.Content = vg;
         }
     }
 }

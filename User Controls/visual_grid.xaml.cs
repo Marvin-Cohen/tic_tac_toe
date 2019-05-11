@@ -25,6 +25,8 @@ namespace tic_tac_toe.User_Controls
         {
             InitializeComponent();
 
+            Gamegrid.InitializeGrid();
+
             imageCells[0, 0] = cell_0_0;
             imageCells[0, 1] = cell_0_1;
             imageCells[0, 2] = cell_0_2;
@@ -35,6 +37,8 @@ namespace tic_tac_toe.User_Controls
             imageCells[2, 1] = cell_2_1;
             imageCells[2, 2] = cell_2_2;
 
+            SynchornizeWithGameGrid();
+/*
             for( int i = 0; i < 3; i++)
             {
                 for( int j = 0; j < 3; j++)
@@ -42,6 +46,7 @@ namespace tic_tac_toe.User_Controls
                     DrawBlank(i, j);
                 }
             }
+ */
         }
 
         public void DrawX(int i, int j)
@@ -134,6 +139,27 @@ namespace tic_tac_toe.User_Controls
             Gamegrid.PlaceMarker(x, y, Gamegrid.WhoseTurn());
 
             SynchornizeWithGameGrid();
+
+            bool isGameOver = Gamegrid.HasTeamWon("x") || Gamegrid.HasTeamWon("o") || Gamegrid.numberOfTurns == 9;
+
+            if( isGameOver )
+            {
+                string winningTeam = ""; 
+
+                if( Gamegrid.HasTeamWon("x") )
+                {
+                    winningTeam = "x";
+                }
+                else if( Gamegrid.HasTeamWon("o"))
+                {
+                    winningTeam = "o";
+                }
+
+                victory_screen vs = new victory_screen(winningTeam);
+
+                this.Content = vs;
+            }
+
 
         }
 
