@@ -64,6 +64,9 @@
     <Compile Include="User Controls\visual_grid.xaml.cs">
       <DependentUpon>visual_grid.xaml</DependentUpon>
     </Compile>
+    <Compile Include="User Controls\welcome.xaml.cs">
+      <DependentUpon>welcome.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -82,6 +85,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="User Controls\visual_grid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\welcome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -124,6 +131,9 @@
     <EmbeddedResource Include="images\congratsO.jpg" />
     <EmbeddedResource Include="images\congratsX.jpg" />
     <EmbeddedResource Include="images\drawXO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="images\welcome.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

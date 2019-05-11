@@ -8,6 +8,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <visual_grid:visual_grid x:Name="gameGrid"></visual_grid:visual_grid>
+        <visual_grid:welcome></visual_grid:welcome>
     </Grid>
 </Window>
